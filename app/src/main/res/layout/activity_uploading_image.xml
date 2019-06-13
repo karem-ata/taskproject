@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.UploadingImageActivity">
+
+    <LinearLayout
+
+        android:id="@+id/uploadImageLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/uploading_view_background"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.26999998">
+
+        <ImageView
+            android:id="@+id/uploadImageImageView"
+            android:layout_width="132dp"
+            android:layout_height="132dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            app:srcCompat="@xml/grey_picture" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="select Image"
+            android:textColor="#FFFFFF"
+            android:textSize="28sp" />
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/uploadImageUploadButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="#00BCD4"
+        android:text="Upload"
+        app:layout_constraintEnd_toEndOf="@+id/uploadImageLayout"
+        app:layout_constraintStart_toStartOf="@+id/uploadImageLayout"
+        app:layout_constraintTop_toBottomOf="@+id/uploadImageLayout" />
+
+    <Button
+        android:id="@+id/uploadImageSkipButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="#FFFFFF"
+        android:text="Skip"
+        android:textColor="#00BCD4"
+        app:layout_constraintEnd_toEndOf="@+id/uploadImageUploadButton"
+        app:layout_constraintStart_toStartOf="@+id/uploadImageUploadButton"
+        app:layout_constraintTop_toBottomOf="@+id/uploadImageUploadButton" />
+</android.support.constraint.ConstraintLayout>

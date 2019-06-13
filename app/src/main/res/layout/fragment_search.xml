@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/nestedScroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent">
+        <android.support.constraint.ConstraintLayout
+                android:id="@+id/emptyView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                        android:id="@+id/emptyViewImageView"
+                        android:layout_width="98dp" android:layout_height="98dp"
+                        app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                        android:src="@drawable/picture"
+                        />
+
+            <TextView
+                    android:id="@+id/emptyViewTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Type something in the search bar to search images"
+                    app:layout_constraintTop_toBottomOf="@id/emptyViewImageView"
+                    app:layout_constraintStart_toStartOf="@id/emptyViewTextView"
+                    app:layout_constraintEnd_toEndOf="@id/emptyViewImageView"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginStart="8dp"/>
+
+            </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <android.support.v7.widget.RecyclerView
+                    android:id="@+id/searchRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:visibility="invisible"
+            >
+
+            </android.support.v7.widget.RecyclerView>
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/floatingActionButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:clickable="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/searchRecyclerView"
+                app:srcCompat="@drawable/upload" />
+        </android.support.constraint.ConstraintLayout>
+    </FrameLayout>
+
+</android.support.v4.widget.NestedScrollView>

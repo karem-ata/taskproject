@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/accountImageView"
+        android:layout_width="86dp"
+        android:layout_height="86dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/account_background"
+        android:scaleType="centerCrop"
+        android:src="@drawable/picture"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/accountName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="@+id/accountImageView"
+        app:layout_constraintStart_toEndOf="@+id/accountImageView"
+        app:layout_constraintTop_toTopOf="@+id/accountImageView"
+        app:layout_constraintVertical_bias="0.0" />
+    <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/accountEmail"
+            app:layout_constraintStart_toEndOf="@+id/accountImageView" android:layout_marginStart="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/accountName" android:layout_marginTop="8dp"/>
+    <TextView
+            android:text="0 followers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/accountFollowers" app:layout_constraintStart_toStartOf="@+id/accountEmail"
+            app:layout_constraintTop_toBottomOf="@+id/accountEmail" android:layout_marginTop="16dp"/>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="1dp"
+        android:layout_height="16dp"
+        android:layout_marginStart="4dp"
+        android:background="#c0c0c0"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/accountFollowers"
+        app:layout_constraintStart_toEndOf="@+id/accountFollowers"
+        app:layout_constraintTop_toTopOf="@id/accountFollowers" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="1dp"
+        android:layout_height="16dp"
+        android:layout_marginStart="4dp"
+        android:background="#c0c0c0"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/accountFollowers"
+        app:layout_constraintStart_toEndOf="@+id/accountFollowing"
+        app:layout_constraintTop_toTopOf="@+id/accountFollowers" />
+
+    <TextView
+        android:id="@+id/photoNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="0 photos"
+        app:layout_constraintBottom_toBottomOf="@+id/accountFollowers"
+        app:layout_constraintStart_toEndOf="@+id/view2"
+        app:layout_constraintTop_toTopOf="@+id/accountFollowers"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/accountFollowing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="0 followings"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintStart_toEndOf="@+id/view"
+        app:layout_constraintTop_toTopOf="@+id/view" />
+
+</android.support.constraint.ConstraintLayout>
